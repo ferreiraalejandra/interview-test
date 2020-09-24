@@ -17,7 +17,7 @@ const CurrencyCard = ({ currencies, currency }) => {
 
   useEffect(() => {
     if (currency && currencyTo) {
-      const API_KEY = process.env.REACT_APP_FIXER_API_KEY
+      const API_KEY = process.env.REACT_APP_FIXER_API_KEY;
       fetch(
         `http://data.fixer.io/api/latest?access_key=${API_KEY}&symbols=${currency.code},${currencyTo.code}`
       )

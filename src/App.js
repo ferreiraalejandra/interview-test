@@ -18,7 +18,8 @@ function App() {
     fetch('https://restcountries.eu/rest/v2/all')
       .then(response => response.json())
       .then(data => {
-        setCurrencies(data.map(country => country.currencies[0]))
+        const newArray = data.map(country => country.currencies[0])
+        setCurrencies(newArray)
       })
   }, [])
 
